@@ -1,0 +1,93 @@
+{
+  "name": "polymesh-sdk-examples",
+  "version": "0.0.0",
+  "description": "Example project that demonstrate how to use Polymesh SDK",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Polymath Studios Inc.",
+  "license": "ISC",
+  "scripts": {
+    "test": "jest --coverage --passWithNoTests",
+    "build:ts": "ttsc -b",
+    "build:docs": "typedoc src",
+    "commit": "npx git-cz",
+    "semantic-release": "semantic-release",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "run-example": "npx ts-node@8.2.0 -r tsconfig-paths/register -r dotenv/config",
+    "format": "cross-env prettier-eslint $PWD\"/src/**/*.{ts,tsx,js,jsx,json,css,md}\" --write"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-conventional": "^7.6.0",
+    "@semantic-release/git": "^8.0.0",
+    "@types/bluebird": "^3.5.33",
+    "@types/jest": "^23.3.10",
+    "@types/node": "^13.1.8",
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.17.0",
+    "@zerollup/ts-transform-paths": "^1.7.11",
+    "cross-env": "^7.0.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-semistandard": "^15.0.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^5.0.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.1.0",
+    "jest": "^24.1.0",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.19.1",
+    "prettier-eslint": "^9.0.1",
+    "prettier-eslint-cli": "^5.0.0",
+    "semantic-release": "^17.2.3",
+    "ts-jest": "^24.3.0",
+    "tsconfig-paths": "^3.9.0",
+    "ttypescript": "^1.5.12",
+    "typedoc": "^0.16.8",
+    "typescript": "4.4.4"
+  },
+  "dependencies": {
+    "@polymeshassociation/local-signing-manager": "^3.2.0",
+    "@polymeshassociation/polymesh-sdk": "23.0.0-alpha.11",
+    "@polymeshassociation/signing-manager-types": "^3.2.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "bluebird": "^3.7.2",
+    "chalk": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "resolutions": {
+    "@polkadot/keyring": "10.4.2",
+    "@polkadot/util": "10.4.2",
+    "@polkadot/networks": "10.4.2",
+    "@polkadot/util-crypto": "10.4.2"
+  },
+  "overrides": {
+    "@polkadot/keyring": "10.4.2",
+    "@polkadot/util": "10.4.2",
+    "@polkadot/networks": "10.4.2",
+    "@polkadot/util-crypto": "10.4.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "@polkadot/keyring": "10.4.2",
+      "@polkadot/util": "10.4.2",
+      "@polkadot/networks": "10.4.2",
+      "@polkadot/util-crypto": "10.4.2"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
